@@ -1,6 +1,7 @@
-from uniai import aliChatLLM, deepseekChatLLM, zhipuChatLLM
+from uniai import deepseekChatLLM, zhipuChatLLM
 
-chatLLM = zhipuChatLLM(model_name="GLM-4", api_key="93c8238ebf3fe2cf702cbc1ce5ec4d1b.xqkKBB72dleCYIjs")
+# chatLLM = zhipuChatLLM(model_name="GLM-4", api_key="93c8238ebf3fe2cf702cbc1ce5ec4d1b.xqkKBB72dleCYIjs")
+chatLLM = deepseekChatLLM(api_key='sk-39f0e28f0fa940089424d6ceccdeb585')
 
 if __name__ == "__main__":
 
@@ -10,5 +11,6 @@ if __name__ == "__main__":
     resp = chatLLM(messages)
     print(resp)
 
-    for resp in chatLLM(messages, stream=True):
-        print(resp)
+    # stream mode
+    # for resp in chatLLM(messages, stream=True):
+    #     print(resp)

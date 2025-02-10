@@ -9,6 +9,7 @@ from LLM import chatLLM
 
 STREAM_INTERVAL = 0.
 
+
 def make_middle_chat():
     carrier = threading.Event()
     carrier.history = []
@@ -19,6 +20,8 @@ def make_middle_chat():
         if len(carrier.history) > 20:
             carrier.history = carrier.history[-16:]
         try:
+            output_text = ""
+            total_tokens = 0
             for resp in chatLLM(
                 messages, temperature=temperature, top_p=top_p, stream=True
             ):
@@ -274,4 +277,4 @@ with gr.Blocks(css=css) as demo:
 
 
 demo.queue()
-demo.launch()
+demo.launch(share=True)

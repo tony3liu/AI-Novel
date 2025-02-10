@@ -14,7 +14,6 @@ def Retryer(func, max_retries=10):
                 print("-" * 30 + f"\n失败：\n{e}\n" + "-" * 30)
                 time.sleep(2.333)
         raise ValueError("失败")
-
     return wrapper
 
 

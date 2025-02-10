@@ -1,4 +1,3 @@
-dashscope
 openai
 zhipuai
-gradio
+gradio>=4.12.0

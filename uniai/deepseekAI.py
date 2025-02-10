@@ -8,7 +8,7 @@ def deepseekChatLLM(model_name="deepseek-chat", api_key=None):
     model_name 取值
     - deepseek-chat
     """
-    api_key = os.environ.get("DEEPSEEK_AI_API_KEY", api_key)
+    # api_key = os.environ.get("DEEPSEEK_AI_API_KEY", api_key)
     client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
 
     def chatLLM(
